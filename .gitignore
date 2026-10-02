@@ -1,35 +1,44 @@
-# User-specified
-.claude
-# root-level scratch skills dir only — NOT the workshop ADK Skill
-# under workshop/starter/agents/copywriter/skills (which must be tracked)
-/skills/
+# ============================================================
+# Multi-Agent Creative Studio
+# ============================================================
+
+
+# ------------------------------------------------------------
+# Environment Variables & Local Configuration
+# ------------------------------------------------------------
+
 .env
-refs/
-prez_youtube/
-medium/
-a2a-inspector/
-workshop/conference-submission.md
-workshop/PUBLISH.md
-workshop/ai-creative-studio-adk-a2a
-workshop/export.sh
-workshop/index.lab.md
-workshop/inject_about.py
-CONTRIBUTIONS.md
-blog.md
-/diagrams/
-workshop/diagrams/ai-creative-studio-architecture.drawio
+*.env
+.env.*
+!.env.example
 
-# Local test/scratch files
-test_*_local.py
-test_local_*.py
-prompt_test.md
 
-# Python
+# ------------------------------------------------------------
+# Python Virtual Environments
+# ------------------------------------------------------------
+
+.venv/
+venv/
+env/
+ENV/
+.ENV/
+
+
+# ------------------------------------------------------------
+# Python Cache / Compiled Files
+# ------------------------------------------------------------
+
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+
+
+# ------------------------------------------------------------
+# Python Build / Package Artifacts
+# ------------------------------------------------------------
+
 build/
 develop-eggs/
 dist/
@@ -43,76 +52,139 @@ sdist/
 var/
 wheels/
 share/python-wheels/
+
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
 
-# Virtual Environments
-venv/
-env/
-ENV/
-.venv/
-.ENV/
 
-# IDEs and Editors
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.DS_Store
+# ------------------------------------------------------------
+# Google ADK Local Runtime Data
+# ------------------------------------------------------------
 
-# Jupyter Notebook
-.ipynb_checkpoints
+.adk/
 
-# Environment variables
-*.env
-.env.*
-!.env.example
 
-# Logs
-*.log
-logs/
-*.log.*
+# ------------------------------------------------------------
+# A2A Inspector / Local Tools
+# ------------------------------------------------------------
 
-# Database
-*.db
-*.sqlite
-*.sqlite3
+a2a-inspector/
 
-# API Keys and Secrets
+
+# ------------------------------------------------------------
+# Local Test / Scratch Files
+# ------------------------------------------------------------
+
+test_*_local.py
+test_local_*.py
+prompt_test.md
+
+/skills/
+refs/
+prez_youtube/
+medium/
+
+
+# ------------------------------------------------------------
+# API Keys / Credentials / Secrets
+# ------------------------------------------------------------
+
 secrets/
 *.key
 *.pem
 credentials.json
 
-# Testing
+
+# ------------------------------------------------------------
+# Logs
+# ------------------------------------------------------------
+
+*.log
+logs/
+*.log.*
+
+
+# ------------------------------------------------------------
+# Testing / Coverage
+# ------------------------------------------------------------
+
 .pytest_cache/
 .coverage
 htmlcov/
 .tox/
 .nox/
 
+
+# ------------------------------------------------------------
+# Databases
+# ------------------------------------------------------------
+
+*.db
+*.sqlite
+*.sqlite3
+
+
+# ------------------------------------------------------------
+# Jupyter Notebook
+# ------------------------------------------------------------
+
+.ipynb_checkpoints/
+
+
+# ------------------------------------------------------------
+# IDEs / Editors
+# ------------------------------------------------------------
+
+.vscode/
+.idea/
+
+*.swp
+*.swo
+*~
+
+
+# ------------------------------------------------------------
+# Claude / Local AI Tool Configuration
+# ------------------------------------------------------------
+
+.claude/
+
+
+# ------------------------------------------------------------
 # macOS
+# ------------------------------------------------------------
+
 .DS_Store
 .AppleDouble
 .LSOverride
 
+
+# ------------------------------------------------------------
 # Windows
+# ------------------------------------------------------------
+
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# Videos
+
+# ------------------------------------------------------------
+# Generated Videos / Large Media
+# ------------------------------------------------------------
+
 *.mp4
 *.mov
 *.avi
 *.mkv
 *.webm
 
-# Temporary files
+
+# ------------------------------------------------------------
+# Temporary Files
+# ------------------------------------------------------------
+
 *.tmp
 *.bak
-*.swp
 .cache/
